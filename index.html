@@ -11,26 +11,23 @@ body{margin:0;background:#fff}
 .wrap{max-width:640px;margin:0 auto;padding:16px}
 .top{display:flex;justify-content:space-between;gap:14px;align-items:flex-start}
 .left{flex:1}
-.badge{font-size:12px;font-weight:800;display:flex;align-items:center;gap:6px}
+.badge{font-size:12px;font-weight:800}
 .badge2{margin-top:8px;background:#e9f5e9;color:#187a18;font-size:11px;padding:6px 10px;border-radius:20px;display:inline-flex;font-weight:600}
 .h1{font-size:26px;font-weight:800;line-height:1;margin:12px 0 6px}
 .h1 span{color:#a05a28}
 .sub{font-size:13px;color:#333}
 .info{background:#fff7ec;border:1px solid #f2d9b5;border-radius:10px;padding:10px 12px;margin-top:12px}
-.info b{font-size:12px}
 
-/* PHOTO PETITE PRO */
+/* PHOTO PETITE */
 .photo{
  width:86px;height:104px;
- border:1.5px solid #111;
- background:#fff;
+ border:1.5px solid #111;background:#fff;
  display:flex;flex-direction:column;align-items:center;justify-content:center;
  text-align:center;flex-shrink:0;
 }
 .photo b{font-size:7.5px;line-height:1.1}
 .photo small{font-size:6.5px;color:#666}
 
-.req{color:#d00}
 .lbl{font-size:12px;font-weight:700;margin:16px 0 6px}
 .inp{width:100%;padding:11px 12px;border:1px solid #e5e5e8;border-radius:8px;background:#f9f9fb;font-size:13px;outline:none}
 .opt{border:1px solid #e5e5e8;border-radius:8px;padding:10px 12px;margin:6px 0;background:#fff;font-size:13px;display:flex;gap:8px}
@@ -39,7 +36,27 @@ body{margin:0;background:#fff}
 .btns button{flex:1;padding:11px;border-radius:8px;font-weight:700;font-size:12px;cursor:pointer}
 .b1{background:#fff;border:1.5px solid #111}
 .b2{background:#111;color:#fff;border:1.5px solid #111}
-@media print{.btn,.btns{display:none}}
+
+/* *** CORRECTION POUR BIC *** */
+@media print{
+ .btn,.btns{display:none}
+  body{background:#fff}
+  /* Enlève le texte d'exemple à l'impression */
+ .inp::placeholder{color:transparent!important}
+ .inp{
+    background:#fff!important;
+    border:none!important;
+    border-bottom:1.5px solid #111!important;
+    border-radius:0!important;
+    padding:16px 0 6px 0!important;
+    height:36px;
+  }
+ .opt{
+    border:none!important;
+    padding:6px 0!important;
+  }
+ .opt input{border:1.5px solid #111!important}
+}
 </style>
 </head>
 <body>
@@ -50,7 +67,7 @@ body{margin:0;background:#fff}
       <div class="badge2">✅ Formulaire officiel · English & Opportunities</div>
       <div class="h1"><span>SpeakUpCI ·</span><br>Inscription</div>
       <div class="sub">🌍 Maîtrisez l'anglais & l'art oratoire — choisissez votre suivi + créneaux</div>
-      <div class="info"><b>📅 Speak Up CI – inscription & planning personnalisé</b><br><span style="font-size:11px;background:#f0f0f0;padding:3px 8px;border-radius:12px">💾 Sauvegarde automatique</span></div>
+      <div class="info"><b>📅 Speak Up CI – inscription & planning personnalisé</b></div>
     </div>
     <div class="photo">
       <div style="font-size:16px">📷</div>
@@ -61,40 +78,46 @@ body{margin:0;background:#fff}
 
   <div style="text-align:right;font-size:10px;color:#c00;margin:14px 0 6px">* Champs obligatoires</div>
 
-  <div class="lbl">👤 NOM ET PRÉNOM <span class="req">*</span></div>
+  <div class="lbl">👤 NOM ET PRÉNOM *</div>
   <input class="inp" placeholder="Ex: ESSE YVAN">
 
-  <div class="lbl">📍 Lieu de résidence <span class="req">*</span></div>
+  <div class="lbl">📍 Lieu de résidence *</div>
   <input class="inp" placeholder="Abidjan, Cocody...">
 
-  <div class="lbl">🟢 Votre contact (WhatsApp) <span class="req">*</span></div>
+  <div class="lbl">🟢 Votre contact (WhatsApp) *</div>
   <input class="inp" placeholder="(+225) 07 47 14 42 68">
 
-  <div class="lbl">🔤 VOTRE NIVEAU EN ANGLAIS <span class="req">*</span></div>
+  <div class="lbl">🔤 VOTRE NIVEAU EN ANGLAIS *</div>
   <label class="opt"><input type="radio" name="niv"> 🌱 Beginner</label>
   <label class="opt"><input type="radio" name="niv"> 📈 Intermediate</label>
   <label class="opt"><input type="radio" name="niv"> 👑 Advanced</label>
 
-  <div class="lbl">📅 Quel type de suivi ? <span class="req">*</span></div>
+  <div class="lbl">📅 Quel type de suivi? *</div>
   <label class="opt"><input type="checkbox"> 💻 Cours en ligne</label>
   <label class="opt"><input type="checkbox"> 👥 En présentiel</label>
   <label class="opt"><input type="checkbox"> 🎓 Coaching privé</label>
   <label class="opt"><input type="checkbox"> 🎤 Club SPEAK UP</label>
 
-  <div class="lbl">📋 Vos attentes <span class="req">*</span></div>
-  <textarea class="inp" style="height:80px"></textarea>
+  <div class="lbl">📋 Vos attentes *</div>
+  <textarea class="inp" style="height:70px" placeholder="Ex: Améliorer mon accent..."></textarea>
 
-  <button class="btn">✈️ Envoyer →</button>
-  <div class="btns">
+  <button class="btn no-print">✈️ Envoyer →</button>
+  <div class="btns no-print">
     <button class="b1" onclick="toPDF()">📄 Télécharger la fiche</button>
-    <button class="b2" onclick="window.print()">🖨️ Imprimer + Coller Photo</button>
+    <button class="b2" onclick="window.print()">🖨️ Imprimer + Bic</button>
   </div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <script>
 function toPDF(){
- html2pdf().set({margin:0.2,filename:'Fiche-SpeakUpCI.pdf',html2canvas:{scale:2},jsPDF:{format:'a4'}}).from(document.getElementById('fiche')).save();
+ // Pour le PDF on enlève les placeholders avant
+ let inputs=document.querySelectorAll('.inp');
+ let oldPlaces=[];
+ inputs.forEach((inp,i)=>{oldPlaces[i]=inp.placeholder; inp.placeholder='';});
+ html2pdf().set({margin:0.2,filename:'Fiche-SpeakUpCI-BIC.pdf',html2canvas:{scale:2},jsPDF:{format:'a4'}}).from(document.getElementById('fiche')).save().then(()=>{
+   inputs.forEach((inp,i)=>{inp.placeholder=oldPlaces[i];});
+ });
 }
 </script>
 </body>

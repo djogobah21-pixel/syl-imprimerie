@@ -1,201 +1,115 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-   <title>SYL IMPRIMERIE par djogobah21-pixel - Devis en Ligne</title>
-    <meta name="description" content="Simulez votre devis en ligne chez SYL IMPRIMERIE. Impression de cartes de visite, flyers, bâches publicitaires, CV au meilleur prix à Abidjan, Côte d'Ivoire.">
-    <meta name="keywords" content="imprimerie abidjan, syl imprimerie, impression en ligne cote d'ivoire, devis imprimerie, flyer, carte de visite">
-    <meta name="author" content="SYL IMPRIMERIE">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SpeakUpCI - Inscription</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;background:#fff;font-family:Inter,Arial,sans-serif;color:#1a1a1a}
+  .wrap{max-width:540px;margin:0 auto;padding:12px}
+  .badge{background:#0e1f4f;color:#fff;display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:30px;font-weight:800;font-size:15px;margin:12px 0}
+  .small{display:inline-flex;align-items:center;gap:6px;background:#f8f6f1;padding:7px 14px;border-radius:20px;font-size:13px;color:#555;margin:8px 0}
+  .title{font-size:30px;font-weight:800;line-height:1.1;margin:14px 0 6px}
+  .title span{color:#e07a2a}
+  .sub{color:#666;font-size:15px;margin-bottom:20px;display:flex;gap:6px}
+  .card{background:#fdf6ec;border-radius:16px;padding:16px;margin:18px 0}
+  .card b{display:flex;gap:8px;align-items:center}
+  .label{font-weight:800;font-size:15px;margin:22px 0 10px;display:flex;gap:6px}
+  .req{color:#e74c3c}
+  input,textarea,select{width:100%;padding:16px;border-radius:14px;border:1.5px solid #e8e8e8;background:#f8f8fb;box-sizing:border-box;font-size:15px;outline:none}
+  input:focus,textarea:focus{background:#fff;border-color:#0e1f4f}
+  .option{border:1.5px solid #eee;border-radius:14px;padding:14px 16px;margin:8px 0;display:flex;align-items:center;gap:10px;background:#fff;cursor:pointer}
+  .option input{width:auto}
+  .btn-send{width:100%;background:linear-gradient(90deg,#0e1f4f,#1e3a8a);color:#fff;border:none;padding:18px;border-radius:14px;font-weight:800;font-size:18px;margin-top:22px;cursor:pointer;display:flex;justify-content:center;gap:10px;align-items:center}
+  .btns2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+  .btn-down{padding:14px;border-radius:12px;border:1.5px dashed #0e1f4f;background:#f0f4ff;font-weight:800;cursor:pointer}
+  .btn-print{padding:14px;border-radius:12px;border:1.5px solid #000;background:#000;color:#fff;font-weight:800;cursor:pointer}
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-    
-    <style>
-        :root {
-            --primary-color: #2c3e50;
-            --accent-color: #3498db;
-            --secondary-color: #e67e22;
-            --bg-color: #f4f7f6;
-        }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--bg-color); padding: 20px; margin: 0; }
-        #zoneFacture { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); max-width: 500px; margin: 20px auto; box-sizing: border-box; }
-        
-        /* Style du bloc Logo + Titre */
-        .header-facture { text-align: center; margin-bottom: 20px; border-bottom: 2px solid var(--accent-color); padding-bottom: 15px; }
-        .logo-entreprise { max-width: 120px; height: auto; margin-bottom: 10px; display: block; margin-left: auto; margin-right: auto; }
-        h2 { color: var(--primary-color); margin: 0; }
-        
-        label { display: block; margin-top: 15px; font-weight: bold; color: #333; }
-        select, input { width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; }
-        .resultat { font-size: 1.2em; font-weight: bold; margin: 20px 0; color: var(--primary-color); }
-        .btn { width: 100%; padding: 12px; margin-top: 10px; border: none; border-radius: 5px; cursor: pointer; color: white; font-weight: bold; transition: 0.3s; font-size: 1em; }
-        .btn-whatsapp { background: #25d366; }
-        .btn-email { background: #ea4335; }
-        .btn-pdf { background: var(--primary-color); }
-        .btn:hover { opacity: 0.9; }
-        
-        /* Cache les boutons uniquement sur le PDF final */
-        .facture-mode .btn { display: none !important; }
-    </style>
+  /* CASE PHOTO A COLLER - VISIBLE A L'IMPRESSION */
+  .photo-box{position:absolute;top:12px;right:12px;width:125px;height:150px;border:2.5px dashed #111;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+  .photo-box b{font-size:10px}
+  .photo-box span{font-size:9px;color:#777}
+  .page{position:relative}
+  @media print{.btn-send,.btns2{display:none} .photo-box{border:2.5px solid #000} body{padding:0}}
+</style>
 </head>
 <body>
-
-<div id="zoneFacture">
-    
-    <div class="header-facture">
-        <div style="font-size: 2.5em; margin-bottom: 10px;">🖨️</div>
-        <h2>IMPRIMERIE SYL MEDIA</h2>
+<div class="wrap" id="fiche">
+  <div class="page">
+    <div class="badge">🎤 SPEAK UP CI</div>
+    <!-- CASE PHOTO QUE TU VOULAIS -->
+    <div class="photo-box">
+      <div style="font-size:28px">📷</div>
+      <b>COLLER PHOTO ICI</b>
+      <span>Après impression<br>4x4 - Colle</span>
     </div>
+  </div>
 
-    <label for="produit">Type de produit ou service :</label>
-    <select id="produit" onchange="calculerDevis()">
-        <option value="carte">Cartes de visite (Standard)</option>
-        <option value="flyer">Flyers A5</option>
-        <option value="bache">Bâche publicitaire (par m²)</option>
-        <option value="invitation">Cartes d'invitation</option>
-        <option value="cv">Impression CV (par page)</option>
-        <option value="lettre">Lettre de motivation (par page)</option>
-        <option value="photocopie_couleur">Photocopie Couleur (par page)</option>
-        <option value="photocopie_nb">Photocopie Noir & Blanc (par page)</option>
-        <option value="scannage">Scannage et envoi (par document)</option>
-        <option value="impression_standard">Impression standard (par page)</option>
-    </select>
+  <div class="small">✅ Formulaire officiel · English & Opportunities</div>
+  
+  <div class="title"><span>SpeakUpCI ·</span><br>Inscription</div>
+  <div class="sub">🌍 Maîtrisez l'anglais & l'art oratoire — choisissez votre suivi + créneaux</div>
 
-    <label for="quantite">Quantité / Nombre de pages / M² :</label>
-    <input type="number" id="quantite" value="100" min="1" oninput="calculerDevis()">
+  <div class="card">
+    <b>📅 Speak Up CI – inscription & planning personnalisé</b>
+    <div class="small">💾 Sauvegarde automatique</div>
+  </div>
 
-    <div class="resultat">
-        Total estimé : <span id="prixTotal">0</span> FCFA
-    </div>
+  <p style="text-align:right;color:#888;font-size:13px"><span style="color:red">*</span> Champs obligatoires</p>
 
-    <div id="infosFacture" style="display: none; margin-top: 25px; color: #000000; font-size: 0.95em; border-top: 1px dashed #cbd5e0; padding-top: 15px;">
-        <p><strong>Détails du devis :</strong></p>
-        <p id="detailService" style="margin-left: 10px;"></p>
-        <p>Généré le : <span id="dateFacture"></span></p>
-        
-        <div style="margin-top: 40px; border-top: 1px solid #cbd5e0; padding-top: 15px; font-size: 0.85em; color: #4a5568; line-height: 1.6;">
-            <p style="font-weight: bold; margin-bottom: 5px; color: #000;">Nos Contacts :</p>
-            • <strong>WhatsApp :</strong> +225 01 02 03 71 33<br>
-            • <strong>E-mails :</strong> syl225imprimerie@gmail.com / djogobah21@gmail.com
-        </div>
-        <p style="margin-top: 30px; text-align: center; font-size: 0.8em; color: #718096; font-style: italic;">Merci pour votre confiance ! À bientôt chez SYL IMPRIMERIE.</p>
-    </div>
+  <div class="label">👤 NOM ET PRÉNOM <span class="req">*</span></div>
+  <input id="nom" placeholder="Ex: ESSE YVAN">
 
-    <button class="btn btn-whatsapp" onclick="envoyerWhatsApp()">Commander via WhatsApp</button>
-    <button class="btn btn-email" onclick="envoyerEmail()">Commander par E-mail</button>
-    <button class="btn btn-pdf" onclick="telechargerFacture()">Télécharger ma facture PDF</button>
+  <div class="label">📍 Lieu de résidence <span class="req">*</span></div>
+  <input id="lieu" placeholder="Abidjan, Cocody, Riviera Palmeraie ...">
+
+  <div class="label">🟢 Votre contact (WhatsApp) <span class="req">*</span></div>
+  <input id="wa" placeholder="(+225) 07 47 14 42 68">
+
+  <div class="label">🔤 VOTRE NIVEAU EN ANGLAIS <span class="req">*</span></div>
+  <label class="option"><input type="radio" name="niv" value="Beginner"> 🌱 Beginner (débutant)</label>
+  <label class="option"><input type="radio" name="niv" value="Intermediate"> 📈 Intermediate (moyen)</label>
+  <label class="option"><input type="radio" name="niv" value="Advanced"> 👑 Advanced (avancé)</label>
+
+  <div class="label">📅 Quel type de suivi préférez-vous ? <span class="req">*</span></div>
+  <label class="option"><input type="checkbox"> 💻 Cours en ligne</label>
+  <label class="option"><input type="checkbox"> 👥 En présentiel</label>
+  <label class="option"><input type="checkbox"> 🎓 Coaching privé</label>
+  <label class="option"><input type="checkbox"> 🎤 Club SPEAK UP</label>
+  <label class="option"><input type="checkbox"> 🏠 Cours à domicile</label>
+  <label class="option"><input type="checkbox"> 🏢 Corporate training</label>
+
+  <div class="label">📋 Vos attentes <span class="req">*</span></div>
+  <textarea id="att" rows="4" placeholder="Ex: Améliorer mon accent, réussir un entretien en anglais, parler en public avec confiance..."></textarea>
+
+  <div class="label">💬 Commentaires/questions (facultatif)</div>
+  <textarea id="com" rows="3" placeholder="Un besoin spécifique ? Des contraintes horaires précises ?"></textarea>
+
+  <button class="btn-send" onclick="sendWA()">✈️ Envoyer →</button>
+
+  <!-- TES 2 NOUVEAUX BOUTONS -->
+  <div class="btns2">
+    <button class="btn-down" onclick="downloadPDF()">📄 Télécharger la fiche</button>
+    <button class="btn-print" onclick="window.print()">🖨️ Imprimer + Coller Photo</button>
+  </div>
+
+  <p style="text-align:center;font-size:11px;color:#999;margin-top:18px">Riviera Palmeraie, Côte d'Ivoire - (+225) 07 47 14 42 68<br>© 2026 Speak Up CI - THE MEETING</p>
 </div>
-        
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <script>
-    // Grille des prix unitaires en FCFA
-    const TARIFS = {
-        carte: 100,              
-        flyer: 200,              
-        bache: 7000,              
-        invitation: 500,          
-        cv: 500,                  
-        lettre: 400,              
-        photocopie_couleur: 100,  
-        photocopie_nb: 50,        
-        scannage: 200,            
-        impression_standard: 100  
-    };
-
-    // Fonction de calcul automatique du total
-    function calculerDevis() {
-        const produitSelect = document.getElementById("produit");
-        if (!produitSelect) return;
-
-        const produitChoisi = produitSelect.value;
-        const quantiteInput = document.getElementById("quantite");
-        const quantite = parseInt(quantiteInput.value) || 0;
-
-        const prixUnitaire = TARIFS[produitChoisi] || 0;
-        const prixTotal = prixUnitaire * quantite;
-
-        document.getElementById("prixTotal").innerText = prixTotal.toLocaleString('fr-FR');
-    }
-
-    // Fonction d'envoi des informations sur WhatsApp
-    function envoyerWhatsApp() {
-        const produitSelect = document.getElementById("produit");
-        const nomProduit = produitSelect.options[produitSelect.selectedIndex].text;
-        const quantite = document.getElementById("quantite").value;
-        const prixTotal = document.getElementById("prixTotal").innerText;
-        const numeroEntreprise = "2250102037133"; 
-
-        const texteMessage = `Bonjour SYL IMPRIMERIE ! Je viens de simuler un devis sur votre site.\n\n` +
-                             `*Service :* ${nomProduit}\n` +
-                             `*Quantité / Pages :* ${quantite}\n` +
-                             `*Total estimé :* ${prixTotal} FCFA\n\n` +
-                             `Je souhaite valider cette commande avec vous.`;
-
-        const lienWhatsApp = `https://wa.me/${numeroEntreprise}?text=${encodeURIComponent(texteMessage)}`;
-        window.open(lienWhatsApp, '_blank');
-    }
-
-    // Fonction d'envoi par Mail
-    function envoyerEmail() {
-        const produitSelect = document.getElementById("produit");
-        const nomProduit = produitSelect.options[produitSelect.selectedIndex].text;
-        const quantite = document.getElementById("quantite").value;
-        const prixTotal = document.getElementById("prixTotal").innerText;
-
-        const emailPrincipal = "syl225imprimerie@gmail.com";
-        const emailSecondaire = "djogobah21@gmail.com";
-        const sujet = encodeURIComponent(`Nouvelle Commande Devis - SYL IMPRIMERIE`);
-        
-        const corpsMessage = encodeURIComponent(
-            `Bonjour SYL IMPRIMERIE,\n\n` +
-            `Je souhaite commander le service suivant d'après le simulateur en ligne :\n\n` +
-            `- Produit : ${nomProduit}\n` +
-            `- Quantité : ${quantite}\n` +
-            `- Total estimé : ${prixTotal} FCFA\n\n` +
-            `Merci de revenir vers moi.`
-        );
-
-        const lienEmail = `mailto:${emailPrincipal}?cc=${emailSecondaire}&subject=${sujet}&body=${corpsMessage}`;
-        window.location.href = lienEmail;
-    }
-
-    // Fonction de génération et téléchargement du fichier PDF
-    function telechargerFacture() {
-        const element = document.getElementById('zoneFacture');
-        const produitSelect = document.getElementById("produit");
-        const nomProduit = produitSelect.options[produitSelect.selectedIndex].text;
-        const quantite = document.getElementById("quantite").value;
-        
-        document.getElementById('dateFacture').innerText = new Date().toLocaleDateString('fr-FR');
-        document.getElementById('detailService').innerText = `• ${nomProduit} (Quantité : ${quantite})`;
-        
-        document.getElementById('infosFacture').style.display = 'block';
-        document.body.classList.add('facture-mode');
-
-        const options = {
-            margin:       15,
-            filename:     'Devis_SYL_IMPRIMERIE.pdf',
-            image:        { type: 'jpeg', quality: 0.98 },
-            html2canvas:  { scale: 2, useCORS: true },
-            jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
-        };
-
-        html2pdf().set(options).from(element).save().then(() => {
-            document.getElementById('infosFacture').style.display = 'none';
-            document.body.classList.remove('facture-mode');
-        }).catch((err) => {
-            console.error(err);
-            document.getElementById('infosFacture').style.display = 'none';
-            document.body.classList.remove('facture-mode');
-        });
-    }
-
-    // Lancement automatique du premier calcul dès que le site charge
-    document.addEventListener("DOMContentLoaded", function() {
-        calculerDevis();
-    });
+function sendWA(){
+  let nom=document.getElementById('nom').value;
+  let lieu=document.getElementById('lieu').value;
+  let wa=document.getElementById('wa').value;
+  let att=document.getElementById('att').value;
+  let txt=`*INSCRIPTION SPEAK UP CI*%0A%0ANom: ${nom}%0ALieu: ${lieu}%0AWhatsApp: ${wa}%0AAttentes: ${att}`;
+  window.open(`https://wa.me/2250747144268?text=${txt}`,'_blank');
+}
+function downloadPDF(){
+  html2pdf().set({margin:0.2,filename:'Fiche-SpeakUpCI-'+document.getElementById('nom').value+'.pdf',html2canvas:{scale:2},jsPDF:{format:'a4'}}).from(document.getElementById('fiche')).save();
+}
 </script>
-    <p>Après barrage; Rivièra Palmeraie; Cocody</p>
 </body>
 </html>

@@ -3,120 +3,127 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>SpeakUpCI - Inscription</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<title>Club Art Oratoire International - Inscription</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;font-family:Inter,sans-serif}
-body{margin:0;background:#fff}
-.wrap{max-width:680px;margin:0 auto;background:#fff;padding:18px 16px}
-.top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
-.left{flex:1}
-.tag{font-size:11px;font-weight:700;color:#111;display:flex;gap:6px;align-items:center}
-.tag2{margin-top:8px;background:#eef6ec;color:#1a7a1a;font-size:11px;padding:5px 10px;border-radius:20px;display:inline-flex;gap:5px;font-weight:600}
-.h1{font-size:22px;font-weight:800;line-height:1.1;margin:12px 0 6px;letter-spacing:-.3px}
-.h1 span{color:#8a4d1f}
-.sub{font-size:13px;color:#1a8a5a;display:flex;align-items:center;gap:6px}
-.card-info{margin-top:14px;background:#fff7eb;border-radius:10px;padding:10px 12px;border:1px solid #f5e0c0}
-.card-info b{font-size:12px;display:flex;gap:6px}
-.save{margin-top:6px;background:#f2f2f4;font-size:11px;padding:4px 8px;border-radius:12px;display:inline-flex;gap:4px;color:#555}
+body{margin:0;background:#f2f4f7}
+.page{max-width:640px;margin:0 auto;background:#fff;min-height:100vh}
+.hero{background:#0a1930;padding:28px 20px 22px;text-align:center;position:relative}
+.logo{width:92px;height:92px;margin:0 auto 14px;background:linear-gradient(180deg,#1a2f5a,#0a1930);border:3px solid #d4af37;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 4px rgba(212,175,55,.2)}
+.logo span{font-size:38px}
+.hero h1{color:#fff;font-size:19px;font-weight:800;margin:0;letter-spacing:.5px}
+.hero h2{color:#d4af37;font-size:15px;font-weight:800;margin:4px 0 0}
+.hero p{color:#8da0c0;font-size:11px;font-style:italic;margin:6px 0 0}
+.sec-title{background:#0a1930;color:#d4af37;padding:8px 14px;font-size:12px;font-weight:800;border-radius:8px;margin:16px 14px 0;letter-spacing:.3px}
+.card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;margin:10px 14px;padding:14px;box-shadow:0 2px 10px rgba(0,0,0,.04)}
+.photo-box{border:2px dashed #d4af37;background:#fffdf0;border-radius:10px;padding:12px}
+.photo-box b{font-size:12px;display:block;margin-bottom:8px}
+.file-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.file-btn{background:#eee;border:1px solid #ccc;padding:6px 12px;border-radius:6px;font-size:13px;cursor:pointer}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.lbl{font-size:12px;font-weight:700;margin-bottom:5px;display:block}
+.req{color:#c00}
+.inp{width:100%;padding:11px 10px;border:1px solid #d9dbe0;border-radius:8px;background:#f9fafb;font-size:13px;outline:none}
+.inp:focus{border-color:#0a1930;background:#fff}
+.inp-select{background:#f1f1f3}
+.full{grid-column:1/-1}
+.btns{padding:14px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.btn{padding:13px;border-radius:10px;font-weight:800;font-size:13px;cursor:pointer;border:1.5px solid #0a1930}
+.btn-light{background:#fff;color:#0a1930}
+.btn-dark{background:#0a1930;color:#d4af37}
+.btn-send{margin:0 14px 10px;width:calc(100% - 28px);background:#0a1930;color:#fff;border:none;border-radius:10px;padding:15px;font-weight:800;cursor:pointer}
 
-/* PHOTO - CORRIGÉE PETITE ET PROPRE COMME TU VEUX */
-.photo{
- width:96px;height:112px;
- border:1.8px solid #111;
- background:#fff;
- display:flex;flex-direction:column;align-items:center;justify-content:center;
- text-align:center;
- flex-shrink:0;
+/* PHOTO A COLLER APRES IMPRESSION */
+.print-photo{display:none}
+@media print{
+ .btns,.btn-send,.photo-box{display:none}
+ .print-photo{display:block;position:absolute;top:16px;right:16px;width:95px;height:115px;border:1.8px solid #000;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:#fff}
+ .hero{padding:14px}
+ .page{border:1px solid #000}
 }
-.photo b{font-size:8px;line-height:1.1;letter-spacing:.4px}
-.photo small{font-size:7px;color:#666;line-height:1.1;margin-top:2px}
-.photo .cam{font-size:14px}
-
-.mand{text-align:right;font-size:10px;color:#c00;margin:18px 0 10px}
-.lbl{font-size:12px;font-weight:700;margin:18px 0 6px;display:flex;gap:5px}
-.req{color:#d00;font-size:10px}
-.inp{width:100%;padding:11px 12px;border:1px solid #e6e6e8;border-radius:8px;background:#f9f9fb;font-size:13px;outline:none}
-.inp:focus{background:#fff;border-color:#111}
-.opt{border:1px solid #e6e6e8;border-radius:8px;padding:10px 12px;margin:6px 0;display:flex;gap:8px;align-items:center;background:#fff;font-size:13px}
-.btn-send{width:100%;background:#0f1f4a;color:#fff;border:none;border-radius:10px;padding:14px;font-weight:700;font-size:14px;margin-top:20px;cursor:pointer;display:flex;justify-content:center;gap:8px}
-.btns{display:flex;gap:8px;margin-top:10px}
-.btns button{flex:1;padding:11px;border-radius:8px;font-weight:700;font-size:12px;cursor:pointer}
-.b1{background:#fff;border:1.5px solid #111}
-.b2{background:#111;color:#fff;border:1.5px solid #111}
-
-@media print{.btn-send,.btns{display:none} body{padding:0}}
+@media(max-width:600px){.grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<div class="wrap" id="fiche">
-  <div class="top">
-    <div class="left">
-      <div class="tag">✏️ SPEAK UP CI</div>
-      <div class="tag2">✅ Formulaire officiel · English & Opportunities</div>
-      <div class="h1"><span style="color:#9a5a24">SpeakUpCI ·</span><br>Inscription</div>
-      <div class="sub">🌍 Maîtrisez l'anglais & l'art oratoire — choisissez votre suivi + créneaux</div>
-      <div class="card-info">
-        <b>📅 Speak Up CI – inscription & planning personnalisé</b>
-        <div class="save">💾 Sauvegarde automatique</div>
-      </div>
-    </div>
-
-    <!-- CASE PHOTO - MAINTENANT PETITE ET PROPRE -->
-    <div class="photo">
-      <div class="cam">📷</div>
-      <b>COLLER<br>PHOTO ICI</b>
-      <small>Après impression<br>4x4 - Colle</small>
+<div class="page" id="fiche">
+  <div class="hero">
+    <div class="logo"><span>🎤</span></div>
+    <h1>FORMULAIRE D'INSCRIPTION</h1>
+    <h2>CLUB ART ORATOIRE INTERNATIONAL</h2>
+    <p>« Prenez la parole. Affirmez votre leadership. »</p>
+    <!-- CASE POUR IMPRESSION -->
+    <div class="print-photo">
+      <div style="font-size:18px">📷</div>
+      <b style="font-size:8px">COLLER PHOTO ICI</b>
+      <span style="font-size:7px">4x4 - Colle</span>
     </div>
   </div>
 
-  <div class="mand">* Champs obligatoires</div>
+  <div class="sec-title">PHOTO D'IDENTITÉ *</div>
+  <div class="card">
+    <div class="photo-box">
+      <b>Ajouter votre photo (pour carte membre)</b>
+      <div class="file-row">
+        <label class="file-btn">Choisir un fichier<input type="file" id="photoInput" accept="image/*" hidden onchange="previewPhoto(event)"></label>
+        <span id="fileName" style="font-size:12px;color:#666">Aucun fichier choisi</span>
+      </div>
+      <img id="preview" style="display:none;margin-top:10px;width:90px;height:110px;object-fit:cover;border:1px solid #000;border-radius:6px">
+    </div>
+  </div>
 
-  <div class="lbl">👤 NOM ET PRÉNOM <span class="req">*</span></div>
-  <input class="inp" id="nom" placeholder="Ex: ESSE YVAN">
+  <div class="sec-title">1. INFORMATIONS PERSONNELLES</div>
+  <div class="card">
+    <div class="grid">
+      <div><span class="lbl">Nom <span class="req">*</span></span><input class="inp" id="nom"></div>
+      <div><span class="lbl">Prénoms <span class="req">*</span></span><input class="inp"></div>
+      <div><span class="lbl">Date naissance</span><input class="inp inp-select" type="date"></div>
+      <div><span class="lbl">Sexe</span><select class="inp inp-select"><option>Femme</option><option>Homme</option></select></div>
+      <div><span class="lbl">Tel / WhatsApp <span class="req">*</span></span><input class="inp" id="tel"></div>
+      <div><span class="lbl">Email <span class="req">*</span></span><input class="inp"></div>
+      <div class="full"><span class="lbl">Ville</span><input class="inp"></div>
+    </div>
+  </div>
 
-  <div class="lbl">📍 Lieu de résidence <span class="req">*</span></div>
-  <input class="inp" placeholder="Abidjan, Cocody, Riviera Palmeraie ...">
+  <div class="sec-title">2. PROFIL PRO</div>
+  <div class="card">
+    <div class="grid">
+      <div><span class="lbl">Profession</span><input class="inp" placeholder="Ex: Entrepreneur, Étudiant..."></div>
+      <div><span class="lbl">Niveau Anglais</span><select class="inp inp-select"><option>Beginner</option><option>Intermediate</option><option>Advanced</option></select></div>
+      <div class="full"><span class="lbl">Objectif</span><input class="inp" placeholder="Prise de parole, leadership..."></div>
+    </div>
+  </div>
 
-  <div class="lbl">🟢 Votre contact (WhatsApp) <span class="req">*</span></div>
-  <input class="inp" id="tel" placeholder="(+225) 07 47 14 42 68">
-
-  <div class="lbl">🔤 VOTRE NIVEAU EN ANGLAIS <span class="req">*</span></div>
-  <label class="opt"><input type="radio" name="niv"> 🌱 Beginner (débutant)</label>
-  <label class="opt"><input type="radio" name="niv"> 📈 Intermediate (moyen)</label>
-  <label class="opt"><input type="radio" name="niv"> 👑 Advanced (avancé)</label>
-
-  <div class="lbl">📅 Quel type de suivi préférez-vous ? <span class="req">*</span></div>
-  <label class="opt"><input type="checkbox"> 💻 Cours en ligne</label>
-  <label class="opt"><input type="checkbox"> 👥 En présentiel</label>
-  <label class="opt"><input type="checkbox"> 🎓 Coaching privé</label>
-  <label class="opt"><input type="checkbox"> 🎤 Club SPEAK UP</label>
-  <label class="opt"><input type="checkbox"> 🏠 Cours à domicile</label>
-  <label class="opt"><input type="checkbox"> 🏢 Corporate training</label>
-
-  <div class="lbl">📋 Vos attentes <span class="req">*</span></div>
-  <textarea class="inp" style="height:80px;resize:none" placeholder="Ex: Améliorer mon accent..."></textarea>
-
-  <div class="lbl">💬 Commentaires / questions (facultatif)</div>
-  <textarea class="inp" style="height:60px;resize:none" placeholder="Un besoin spécifique ?"></textarea>
-
-  <button class="btn-send" onclick="toWA()">✈️ Envoyer →</button>
+  <button class="btn-send" onclick="toWA()">✈️ Envoyer l'inscription</button>
 
   <div class="btns">
-    <button class="b1" onclick="toPDF()">📄 Télécharger la fiche</button>
-    <button class="b2" onclick="window.print()">🖨️ Imprimer + Photo</button>
+    <button class="btn btn-light" onclick="toPDF()">📄 Télécharger la fiche</button>
+    <button class="btn btn-dark" onclick="window.print()">🖨️ Imprimer + Coller Photo</button>
   </div>
+
+  <p style="text-align:center;font-size:10px;color:#999;padding:10px">Après impression, collez photo 4x4 en haut à droite si vous n'avez pas uploadé</p>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <script>
+function previewPhoto(e){
+  let f=e.target.files[0];
+  if(!f)return;
+  document.getElementById('fileName').textContent=f.name;
+  let r=new FileReader();
+  r.onload=function(ev){
+    let img=document.getElementById('preview');
+    img.src=ev.target.result; img.style.display='block';
+  }
+  r.readAsDataURL(f);
+}
 function toWA(){
- let n=document.getElementById('nom').value||'Inscrit';
- let t=document.getElementById('tel').value||'';
- window.open(`https://wa.me/2250747144268?text=Inscription SpeakUpCI - ${n} - ${t}`,'_blank');
+ let n=document.getElementById('nom').value;
+ let t=document.getElementById('tel').value;
+ window.open(`https://wa.me/2250747144268?text=Inscription Club Art Oratoire - Nom:${n} Tel:${t}`,'_blank');
 }
 function toPDF(){
- html2pdf().set({margin:0.15,filename:'Fiche-SpeakUpCI.pdf',html2canvas:{scale:2},jsPDF:{format:'a4'}}).from(document.getElementById('fiche')).save();
+ html2pdf().set({margin:0.15,filename:'Fiche-Club-Art-Oratoire.pdf',html2canvas:{scale:2},jsPDF:{format:'a4'}}).from(document.getElementById('fiche')).save();
 }
 </script>
 </body>

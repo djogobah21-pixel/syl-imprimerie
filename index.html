@@ -3,117 +3,116 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Speak Up CI - Inscription</title>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+<title>Speak Up CI - Fiche</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet">
 <style>
-*{box-sizing:border-box;font-family:'Plus Jakarta Sans',sans-serif}
-body{margin:0;background:#fcf9f3;color:#111}
-.wrap{max-width:560px;margin:0 auto;padding:14px}
-.header{position:relative;background:#fff;border-radius:22px;padding:20px;border:1px solid #eee;box-shadow:0 12px 40px rgba(0,0,0,.06)}
-.badge{background:#0f204d;color:#fff;padding:10px 18px;border-radius:100px;display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:14px}
-.badge b{color:#ff8c32}
-.badge span{background:#ff8c32;color:#000;padding:3px 8px;border-radius:20px;font-size:10px;margin-left:4px}
-.title{font-size:34px;font-weight:800;line-height:1;letter-spacing:-1px;margin:16px 0 8px}
-.title span{color:#e46a16}
-.sub{color:#666;font-size:15px;line-height:1.4}
-.info{margin-top:14px;background:linear-gradient(180deg,#fff8ef,#fff);border:1px solid #ffe2c2;border-radius:18px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center}
-.info b{display:flex;align-items:center;gap:8px;font-size:14px}
-.small{color:#888;font-size:12px;margin-top:20px;text-align:right}
-.label{margin:26px 0 10px;font-weight:800;font-size:14px;display:flex;align-items:center;gap:7px}
-.label em{color:#e11d48;font-style:normal}
-.input{width:100%;background:#f6f6f9;border:1.8px solid #eceaf0;border-radius:16px;padding:16px;font-size:15px;outline:none;transition:.2s}
-.input:focus{background:#fff;border-color:#0f204d;box-shadow:0 0 0 5px rgba(15,32,77,.08)}
-.card-opt{border:1.8px solid #eee;background:#fff;border-radius:16px;padding:15px 16px;margin:9px 0;display:flex;align-items:center;gap:12px;font-weight:600;font-size:15px;cursor:pointer;transition:.2s;box-shadow:0 2px 10px rgba(0,0,0,.02)}
-.card-opt:hover{border-color:#0f204d;transform:translateY(-1px);box-shadow:0 8px 20px rgba(0,0,0,.07)}
-.card-opt input{width:18px;height:18px;accent-color:#0f204d}
-.textarea{width:100%;background:#f6f6f9;border:1.8px solid #eceaf0;border-radius:16px;padding:16px;min-height:110px;font-size:15px;outline:none;resize:none}
-.textarea:focus{background:#fff;border-color:#0f204d}
-.btn{width:100%;background:linear-gradient(180deg,#0f204d,#152e6e);color:#fff;border:none;border-radius:18px;padding:18px;font-weight:800;font-size:18px;margin-top:22px;cursor:pointer;display:flex;justify-content:center;align-items:center;gap:10px;box-shadow:0 12px 24px rgba(15,32,77,.25)}
-.btn:active{transform:scale(.98)}
+*{box-sizing:border-box;font-family:Inter,sans-serif}
+body{margin:0;background:#f5f5f7}
+.page{max-width:620px;margin:20px auto;background:#fff;border-radius:12px;box-shadow:0 4px 24px rgba(0,0,0,.06);overflow:hidden}
+.head{padding:22px 24px 18px;display:flex;justify-content:space-between;align-items:flex-start;border-bottom:1px solid #eee}
+.head-left .tag{background:#0f204d;color:#fff;padding:6px 12px;border-radius:20px;font-size:12px;font-weight:700;display:inline-flex;gap:6px}
+.head-left h1{font-size:28px;margin:12px 0 4px;letter-spacing:-.5px;line-height:1}
+.head-left p{margin:0;color:#666;font-size:13px}
 
-/* TES 2 AJOUTS - DESIGN WOW */
-.photo-box{position:absolute;top:18px;right:18px;width:118px;height:142px;background:#fff;border:2.2px dashed #0f204d;border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:0 6px 18px rgba(0,0,0,.08)}
-.photo-box b{font-size:10px;letter-spacing:.5px;color:#0f204d}
-.photo-box small{font-size:9px;color:#888;line-height:1.2;margin-top:3px}
-.btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
-.btn-sec{padding:14px;border-radius:14px;font-weight:800;cursor:pointer;border:1.5px solid #111}
-.btn-light{background:#fff;color:#111}
-.btn-dark{background:#111;color:#fff}
-@media(max-width:600px){.btns{grid-template-columns:1fr} .photo-box{position:relative;top:0;right:0;width:100%;height:86px;flex-direction:row;gap:10px;margin-top:14px}}
-@media print{.btn,.btns{display:none} .wrap{padding:0} .header{box-shadow:none;border:2px solid #000} .photo-box{border:2.5px solid #000}}
+/* CASE PHOTO PRO - PETITE TAILLE PASSEPORT */
+.photo{
+ width:108px;height:132px;
+ border:1px dashed #111;
+ border-radius:8px;
+ background:#fafafa;
+ display:flex;flex-direction:column;align-items:center;justify-content:center;
+ text-align:center;flex-shrink:0
+}
+.photo .ico{font-size:22px;margin-bottom:4px}
+.photo b{font-size:9px;letter-spacing:.6px;line-height:1.1}
+.photo span{font-size:8px;color:#888;margin-top:3px;line-height:1.2}
+
+.body{padding:20px 24px}
+.hint{text-align:right;font-size:11px;color:#999;margin-bottom:10px}
+.lbl{font-size:13px;font-weight:700;margin:18px 0 8px}
+.lbl i{font-style:normal}
+.req{color:#d00}
+.inp{width:100%;padding:13px 14px;border:1px solid #e5e5e7;border-radius:10px;background:#fbfbfd;font-size:14px;outline:none}
+.inp:focus{background:#fff;border-color:#111}
+.opt{border:1px solid #e5e5e7;border-radius:10px;padding:12px 14px;margin:7px 0;display:flex;gap:10px;align-items:center;background:#fff;font-size:14px;cursor:pointer}
+.opt:hover{border-color:#111}
+.area{width:100%;padding:13px 14px;border:1px solid #e5e5e7;border-radius:10px;background:#fbfbfd;min-height:90px;resize:none;outline:none;font-size:14px}
+.btn-main{width:100%;margin-top:20px;background:#0f204d;color:#fff;border:none;border-radius:10px;padding:15px;font-weight:700;font-size:15px;cursor:pointer}
+.btns{display:flex;gap:10px;margin-top:10px}
+.btns button{flex:1;padding:12px;border-radius:10px;font-weight:700;font-size:13px;cursor:pointer}
+.btn-outline{background:#fff;border:1px solid #111}
+.btn-black{background:#111;color:#fff;border:1px solid #111}
+
+@media(max-width:600px){.head{flex-direction:column;gap:16px} .photo{width:100%;height:80px;flex-direction:row;gap:10px} .btns{flex-direction:column}}
+@media print{body{background:#fff} .page{box-shadow:none;border:1px solid #000;border-radius:0;margin:0;max-width:100%} .btn-main,.btns{display:none}}
 </style>
 </head>
 <body>
-<div class="wrap" id="fiche">
-  <div class="header">
-    <div class="badge">🎤 SPEAK UP CI <b>·</b> <span>OFFICIEL</span></div>
-
-    <!-- CASE PHOTO QUE TU VEUX -->
-    <div class="photo-box">
-      <div style="font-size:28px">📷</div>
-      <div><b>COLLER PHOTO ICI</b><br><small>Après impression<br>4x4 - Colle uniquement</small></div>
+<div class="page" id="fiche">
+  <div class="head">
+    <div class="head-left">
+      <div class="tag">🎤 SPEAK UP CI</div>
+      <h1>Inscription</h1>
+      <p>Maîtrisez l'anglais & l'art oratoire<br>Formulaire officiel 2025-2026</p>
     </div>
-
-    <div class="title"><span style="color:#e46a16">SpeakUpCI ·</span><br>Inscription</div>
-    <div class="sub">Maîtrisez l'anglais & l'art oratoire — choisissez votre suivi + créneaux</div>
-
-    <div class="info">
-      <b>📅 Speak Up CI – inscription & planning personnalisé</b>
-      <span style="font-size:11px;background:#f1f5f1;padding:6px 10px;border-radius:20px">💾 Sauvegarde auto</span>
+    <div class="photo">
+      <div class="ico">📷</div>
+      <b>COLLER<br>PHOTO ICI</b>
+      <span>4x4 cm<br>Colle</span>
     </div>
   </div>
 
-  <div class="small"><span style="color:red">*</span> Champs obligatoires</div>
+  <div class="body">
+    <div class="hint"><span style="color:#d00">*</span> Obligatoire</div>
 
-  <div class="label">👤 NOM ET PRÉNOM <em>*</em></div>
-  <input class="input" id="nom" placeholder="Ex: ESSE YVAN">
+    <div class="lbl">👤 NOM ET PRÉNOM <span class="req">*</span></div>
+    <input class="inp" id="nom" placeholder="Ex: ESSE YVAN">
 
-  <div class="label">📍 Lieu de résidence <em>*</em></div>
-  <input class="input" id="lieu" placeholder="Abidjan, Cocody, Riviera Palmeraie ...">
+    <div class="lbl">📍 Lieu de résidence <span class="req">*</span></div>
+    <input class="inp" placeholder="Cocody Riviera Palmeraie">
 
-  <div class="label">💬 Votre contact (WhatsApp) <em>*</em></div>
-  <input class="input" id="tel" placeholder="(+225) 07 47 14 42 68">
+    <div class="lbl">💬 WhatsApp <span class="req">*</span></div>
+    <input class="inp" id="tel" placeholder="07 47 14 42 68">
 
-  <div class="label">🔤 VOTRE NIVEAU EN ANGLAIS <em>*</em></div>
-  <label class="card-opt"><input type="radio" name="niv"> 🌱 Beginner (débutant)</label>
-  <label class="card-opt"><input type="radio" name="niv"> 📈 Intermediate (moyen)</label>
-  <label class="card-opt"><input type="radio" name="niv"> 👑 Advanced (avancé)</label>
+    <div class="lbl">🔤 NIVEAU ANGLAIS <span class="req">*</span></div>
+    <label class="opt"><input type="radio" name="niv"> Débutant</label>
+    <label class="opt"><input type="radio" name="niv"> Intermédiaire</label>
+    <label class="opt"><input type="radio" name="niv"> Avancé</label>
 
-  <div class="label">✅ Quel type de suivi préférez-vous ? <em>*</em></div>
-  <label class="card-opt"><input type="checkbox"> 💻 Cours en ligne</label>
-  <label class="card-opt"><input type="checkbox"> 👥 En présentiel</label>
-  <label class="card-opt"><input type="checkbox"> 🎓 Coaching privé</label>
-  <label class="card-opt"><input type="checkbox"> 🎤 Club SPEAK UP</label>
-  <label class="card-opt"><input type="checkbox"> 🏠 Cours à domicile</label>
-  <label class="card-opt"><input type="checkbox"> 🏢 Corporate training</label>
+    <div class="lbl">✅ Type de suivi <span class="req">*</span></div>
+    <label class="opt"><input type="checkbox"> Cours en ligne</label>
+    <label class="opt"><input type="checkbox"> Présentiel</label>
+    <label class="opt"><input type="checkbox"> Coaching privé</label>
+    <label class="opt"><input type="checkbox"> Club SPEAK UP</label>
+    <label class="opt"><input type="checkbox"> Cours à domicile</label>
+    <label class="opt"><input type="checkbox"> Corporate training</label>
 
-  <div class="label">📋 Vos attentes <em>*</em></div>
-  <textarea class="textarea" id="att" placeholder="Ex: Améliorer mon accent, réussir un entretien en anglais, parler en public avec confiance..."></textarea>
+    <div class="lbl">📋 Vos attentes <span class="req">*</span></div>
+    <textarea class="area" placeholder="Ex: Améliorer mon accent, réussir un entretien..."></textarea>
 
-  <div class="label">💬 Commentaires/questions (facultatif)</div>
-  <textarea class="textarea" placeholder="Un besoin spécifique ? Des contraintes horaires précises ?"></textarea>
+    <div class="lbl">💬 Commentaires (facultatif)</div>
+    <textarea class="area" style="min-height:70px" placeholder="Besoin spécifique ?"></textarea>
 
-  <button class="btn" onclick="sendWA()">✈️ Envoyer →</button>
+    <button class="btn-main" onclick="toWA()">✈️ Envoyer l'inscription</button>
 
-  <div class="btns">
-    <button class="btn-sec btn-light" onclick="toPDF()">📄 Télécharger la fiche</button>
-    <button class="btn-sec btn-dark" onclick="window.print()">🖨️ Imprimer + Coller Photo</button>
+    <div class="btns">
+      <button class="btn-outline" onclick="toPDF()">📄 Télécharger la fiche</button>
+      <button class="btn-black" onclick="window.print()">🖨️ Imprimer</button>
+    </div>
+
+    <p style="text-align:center;font-size:10px;color:#aaa;margin-top:16px">Après impression, collez votre photo 4x4 dans le cadre prévu en haut à droite • Ne pas agrafer</p>
   </div>
-
-  <p style="text-align:center;color:#999;font-size:11px;margin-top:20px">Riviera Palmeraie, Côte d'Ivoire · (+225) 07 47 14 42 68<br>© 2026 Speak Up CI – THE MEETING · Anglais & Art Oratoire</p>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <script>
-function sendWA(){
+function toWA(){
  let n=document.getElementById('nom').value;
- let l=document.getElementById('lieu').value;
  let t=document.getElementById('tel').value;
- let a=document.getElementById('att').value;
- window.open(`https://wa.me/2250747144268?text=*Inscription*%0ANom:${n}%0ALieu:${l}%0ATel:${t}%0AAttentes:${a}`,'_blank');
+ window.open(`https://wa.me/2250747144268?text=Inscription SpeakUp - Nom:${n} Tel:${t}`,'_blank');
 }
 function toPDF(){
- html2pdf().set({margin:0.2,filename:'Fiche-SpeakUpCI.pdf',html2canvas:{scale:2},jsPDF:{format:'a4'}}).from(document.getElementById('fiche')).save();
+ html2pdf().set({margin:0.2,filename:'Fiche-Inscription-SpeakUp.pdf',html2canvas:{scale:2},jsPDF:{format:'a4'}}).from(document.getElementById('fiche')).save();
 }
 </script>
 </body>

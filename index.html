@@ -3,163 +3,123 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SpeakUpCI - Fiche Officielle</title>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<title>SpeakUpCI - 1 Page</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;font-family:'Plus Jakarta Sans',sans-serif}
-body{margin:0;background:#e8ecf1;padding:18px;color:#0f172a}
-.fiche{max-width:800px;margin:0 auto;background:#fff;border-radius:18px;overflow:hidden;border:1.5px solid #0f172a;box-shadow:0 20px 60px rgba(0,0,0,.18)}
-
-/* TOP BARRE PRO */
-.topbar{height:6px;background:linear-gradient(90deg,#0f172a 0%,#b4692e 100%)}
-.header{padding:22px 26px 18px;display:flex;justify-content:space-between;align-items:flex-start;background:linear-gradient(180deg,#fafaf9 0%,#fff 100%);border-bottom:1.5px solid #0f172a}
-.logo-wrap{display:flex;gap:16px;align-items:center}
-.logo{width:72px;height:72px;border-radius:16px;border:1.5px solid #0f172a;padding:6px;background:#fff;object-fit:contain;box-shadow:0 4px 12px rgba(0,0,0,.08)}
-.brand{font-size:11px;font-weight:800;letter-spacing:2px;color:#b4692e}
-.title{font-size:30px;font-weight:800;line-height:.92;letter-spacing:-.8px;margin-top:6px}
-.title i{font-style:normal;color:#b4692e}
-.sub{font-size:11.5px;color:#475569;margin-top:8px;max-width:380px;line-height:1.4}
-.badge{margin-top:12px;background:#0f172a;color:#fff;font-size:9px;font-weight:800;letter-spacing:.6px;padding:6px 12px;border-radius:100px;display:inline-flex;gap:6px;align-items:center}
-
-/* PHOTO PRO */
-.photo{width:108px;height:136px;border:1.8px solid #0f172a;border-radius:14px;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden}
-.photo:before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:#b4692e}
-.photo-icon{width:36px;height:36px;border-radius:10px;background:#f8fafc;border:1px solid #e2e8f0;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:6px}
-.photo b{font-size:9px;font-weight:800;letter-spacing:.4px;line-height:1.1;text-align:center}
-.photo small{font-size:7px;color:#64748b;font-weight:700;margin-top:4px;text-align:center;line-height:1.2}
-
-.body{padding:20px 26px 26px}
-.lbl{font-size:10px;font-weight:800;letter-spacing:.8px;color:#0f172a;margin-bottom:8px;text-transform:uppercase;display:flex;gap:6px}
-.line{height:42px;border:1.5px solid #cbd5e1;border-radius:12px;background:#f8fafc}
-.line:focus-within{border-color:#0f172a;background:#fff}
-.line-sm{height:38px}
-.row{display:flex;gap:16px;margin-top:18px}
+body{margin:0;background:#eef1f5;padding:10px}
+.fiche{max-width:750px;height:1060px;margin:0 auto;background:#fff;border:2px solid #000;border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.topbar{height:5px;background:linear-gradient(90deg,#0f172a,#b4692e);flex-shrink:0}
+.header{padding:12px 18px 10px;display:flex;justify-content:space-between;border-bottom:1.5px solid #000;flex-shrink:0}
+.logo{width:54px;height:54px;border:1.5px solid #000;border-radius:12px;padding:4px;object-fit:contain}
+.title{font-size:22px;font-weight:800;line-height:.9}
+.title i{color:#b4692e;font-style:normal}
+.sub{font-size:9px;color:#475569;margin-top:4px}
+.photo{width:88px;height:104px;border:1.8px solid #000;border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;flex-shrink:0}
+.photo b{font-size:7.5px;line-height:1.1}
+.body{padding:10px 18px 8px;flex:1;display:flex;flex-direction:column;gap:8px}
+.lbl{font-size:8.5px;font-weight:800;text-transform:uppercase;margin-bottom:4px}
+.line{height:30px;border:1.2px solid #94a3b8;border-radius:8px;background:#f8fafc}
+.line-sm{height:26px}
+.row{display:flex;gap:12px}
 .col{flex:1}
+.sec{font-size:9px;font-weight:800;background:#000;color:#fff;padding:4px 10px;border-radius:20px;display:inline-block;margin-top:2px}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-top:4px}
+.pill{border:1.2px solid #000;border-radius:20px;padding:6px 10px;font-size:9.5px;font-weight:700;display:flex;gap:5px;align-items:center}
+.dot{width:12px;height:12px;border:1.5px solid #000;border-radius:50%}
+.checks{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-top:4px}
+.ck{border:1px solid #e2e8f0;background:#f8fafc;border-radius:8px;padding:6px 8px;font-size:9.5px;font-weight:600;display:flex;gap:6px;align-items:center}
+.footer{margin-top:auto;border-top:1.2px dashed #94a3b8;padding-top:8px;display:flex;justify-content:space-between;align-items:flex-end}
+.sig{width:38%;border-top:1.2px solid #000;margin-top:24px;padding-top:3px;text-align:center;font-size:8px;font-weight:800}
+.foot{font-size:7.5px;text-align:right;line-height:1.4;color:#475569}
 
-.sec{margin:26px 0 12px;display:flex;align-items:center;gap:10px}
-.sec .bar{width:3px;height:18px;background:#b4692e;border-radius:10px}
-.sec .txt{font-size:11px;font-weight:800;letter-spacing:.6px;text-transform:uppercase}
+.no-print{max-width:750px;margin:10px auto;display:flex;gap:8px}
+.btn{flex:1;padding:12px;border-radius:10px;font-weight:800;font-size:12px;cursor:pointer;border:1.8px solid #000}
+.btn-w{background:#fff}.btn-b{background:#000;color:#fff}
 
-.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
-.pill{border:1.5px solid #0f172a;border-radius:100px;padding:11px 14px;font-size:11.5px;font-weight:700;background:#fff;display:flex;gap:8px;align-items:center;transition:.2s}
-.pill:hover{background:#f8fafc}
-.dot{width:18px;height:18px;border:1.8px solid #0f172a;border-radius:50%;display:inline-block;flex-shrink:0}
-
-.checks{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:6px}
-.ck{border:1.4px solid #e2e8f0;border-radius:12px;padding:12px 12px;font-size:11.5px;font-weight:600;background:#f8fafc;display:flex;gap:9px;align-items:center}
-.ck input{width:18px;height:18px;accent-color:#0f172a}
-
-.lines .line{margin-top:10px}
-.footer{margin-top:28px;padding-top:16px;border-top:1.5px dashed #cbd5e1;display:flex;justify-content:space-between;align-items:flex-end}
-.sig{width:44%;border-top:1.5px solid #0f172a;margin-top:40px;padding-top:6px;text-align:center;font-size:10px;font-weight:800;letter-spacing:.4px}
-.foot-right{font-size:9px;line-height:1.5;text-align:right;color:#475569}
-.foot-right b{color:#0f172a;font-size:10px}
-
-.no-print{max-width:800px;margin:20px auto;display:flex;gap:12px}
-.btn{flex:1;padding:15px;border-radius:14px;font-weight:800;font-size:13px;cursor:pointer;letter-spacing:.2px;border:2px solid #0f172a;transition:.2s}
-.btn-w{background:#fff;color:#0f172a}
-.btn-b{background:#0f172a;color:#fff;box-shadow:0 8px 20px rgba(15,23,42,.25)}
-.btn:hover{transform:translateY(-1px)}
-
-@media print{body{background:#fff;padding:0}.fiche{box-shadow:none;border-radius:0;border:2px solid #000}.no-print{display:none}@page{margin:10mm}}
-@media(max-width:720px){.grid3,.checks{grid-template-columns:1fr}.row{flex-direction:column}.header{flex-direction:column;gap:18px}.photo{align-self:flex-start}}
+@media print{
+ body{padding:0;background:#fff}
+ .fiche{box-shadow:none;border-radius:0;height:100vh;max-height:100vh;overflow:hidden;border:2px solid #000}
+ .no-print{display:none}
+ @page{size:A4;margin:8mm}
+}
 </style>
 </head>
 <body>
 
 <div class="fiche" id="fiche">
-  <div class="topbar"></div>
-  <div class="header">
+<div class="topbar"></div>
+<div class="header">
+  <div style="display:flex;gap:12px;align-items:center">
+    <img class="logo" src="logo.jpg">
     <div>
-      <div class="logo-wrap">
-        <img class="logo" src="logo.jpg">
-        <div>
-          <div class="brand">SPEAK UP CI • ENGLISH & OPPORTUNITIES</div>
-          <div class="title"><i>SpeakUpCI</i> ·<br>Inscription</div>
-        </div>
-      </div>
-      <div class="sub">🌍 Maîtrisez l'anglais — choisissez votre suivi + vos créneaux. Formulaire officiel à remplir au stylo.</div>
-      <div class="badge">● FORMULAIRE OFFICIEL BIC NOIR</div>
+      <div style="font-size:9px;font-weight:800;letter-spacing:1.5px;color:#b4692e">SPEAK UP CI</div>
+      <div class="title"><i>SpeakUpCI ·</i> Inscription</div>
+      <div class="sub">🌍 English & Art Oratoire • Formulaire officiel BIC NOIR • 1 page</div>
     </div>
+  </div>
+  <div class="photo">
+    <div style="font-size:18px">📷</div>
+    <b>COLLER<br>PHOTO ICI</b>
+    <small style="font-size:6px">4x4 - Colle</small>
+  </div>
+</div>
 
-    <div class="photo">
-      <div class="photo-icon">📷</div>
-      <b>COLLER<br>PHOTO ICI</b>
-      <small>4x4 cm<br>Colle forte<br>Pas d'agrafe</small>
+<div class="body">
+  <div class="row">
+    <div class="col"><div class="lbl">Nom et prénoms *</div><div class="line"></div></div>
+  </div>
+  <div class="row">
+    <div class="col"><div class="lbl">Lieu de résidence *</div><div class="line line-sm"></div></div>
+    <div class="col"><div class="lbl">Contact WhatsApp *</div><div class="line line-sm"></div></div>
+  </div>
+
+  <div><span class="sec">🔤 Niveau d'anglais *</span></div>
+  <div class="grid3">
+    <div class="pill"><span class="dot"></span> Beginner (débutant)</div>
+    <div class="pill"><span class="dot"></span> Intermediate (moyen)</div>
+    <div class="pill"><span class="dot"></span> Advanced (avancé)</div>
+  </div>
+
+  <div><span class="sec">📅 Type de suivi préféré *</span></div>
+  <div class="checks">
+    <label class="ck"><input type="checkbox" style="width:13px;height:13px"> 💻 En ligne</label>
+    <label class="ck"><input type="checkbox" style="width:13px;height:13px"> 👥 Présentiel</label>
+    <label class="ck"><input type="checkbox" style="width:13px;height:13px"> 👩‍🏫 Coaching privé</label>
+    <label class="ck"><input type="checkbox" style="width:13px;height:13px"> 🎤 Club SPEAK UP</label>
+    <label class="ck"><input type="checkbox" style="width:13px;height:13px"> 🏠 À domicile</label>
+    <label class="ck"><input type="checkbox" style="width:13px;height:13px"> 🏢 Corporate</label>
+  </div>
+
+  <div class="row"><div class="col"><div class="lbl">Autre : précisez</div><div class="line line-sm"></div></div></div>
+
+  <div class="row">
+    <div class="col">
+      <div class="lbl">Vos attentes / objectif *</div>
+      <div class="line"></div>
+      <div class="line" style="margin-top:6px"></div>
     </div>
   </div>
 
-  <div class="body">
-    <div class="row">
-      <div class="col"><div class="lbl">👤 Nom et prénoms *</div><div class="line"></div></div>
-    </div>
-    <div class="row">
-      <div class="col"><div class="lbl">📍 Lieu de résidence *</div><div class="line line-sm"></div></div>
-      <div class="col"><div class="lbl">🟢 WhatsApp *</div><div class="line line-sm"></div></div>
-    </div>
-
-    <div class="sec"><div class="bar"></div><div class="txt">Votre niveau en anglais</div></div>
-    <div class="grid3">
-      <div class="pill"><span class="dot"></span> 🌱 Beginner</div>
-      <div class="pill"><span class="dot"></span> 📈 Intermediate</div>
-      <div class="pill"><span class="dot"></span> 👑 Advanced</div>
-    </div>
-
-    <div class="sec"><div class="bar"></div><div class="txt">Type de suivi préféré</div></div>
-    <div class="checks">
-      <label class="ck"><input type="checkbox"> 💻 En ligne</label>
-      <label class="ck"><input type="checkbox"> 👥 Présentiel</label>
-      <label class="ck"><input type="checkbox"> 👩‍🏫 Coaching privé</label>
-      <label class="ck"><input type="checkbox"> 🎤 Club SPEAK UP</label>
-      <label class="ck"><input type="checkbox"> 🏠 À domicile</label>
-      <label class="ck"><input type="checkbox"> 🏢 Corporate</label>
-    </div>
-
-    <div class="row">
-      <div class="col">
-        <div class="lbl">🟠 Autre - Précisez</div><div class="line line-sm"></div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col">
-        <div class="lbl">🎯 Vos attentes / Objectif principal</div>
-        <div class="lines">
-          <div class="line"></div>
-          <div class="line"></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col">
-        <div class="lbl">📅 Vos disponibilités</div>
-        <div class="line"></div>
-      </div>
-    </div>
-
-    <div class="footer">
-      <div class="sig">DATE ET SIGNATURE</div>
-      <div class="foot-right">
-        <b>SPEAK UP CI</b><br>
-        Riviera Palmeraie, Rosier Programme 1<br>
-        01 ABIDJAN, CI • www.speakupci.net<br>
-        @speakupci • +225 07 47 14 42 68
-      </div>
+  <div class="row">
+    <div class="col">
+      <div class="lbl">Disponibilités (jours / heures)</div>
+      <div class="line"></div>
     </div>
   </div>
+
+  <div class="footer">
+    <div class="sig">DATE ET SIGNATURE</div>
+    <div class="foot"><b>SPEAK UP CI</b><br>Riviera Palmeraie - 01 ABIDJAN<br>www.speakupci.net | @speakupci<br>+225 07 47 14 42 68</div>
+  </div>
+</div>
 </div>
 
 <div class="no-print">
-  <button class="btn btn-w" onclick="toPDF()">📄 PDF vierge</button>
-  <button class="btn btn-b" onclick="window.print()">🖨️ Imprimer BIC</button>
+  <button class="btn btn-w" onclick="html2pdf().set({margin:0,filename:'Fiche-SpeakUpCI-1-PAGE.pdf',html2canvas:{scale:3,useCORS:true},jsPDF:{format:'a4',orientation:'portrait'}}).from(document.getElementById('fiche')).save()">📄 Télécharger PDF 1 PAGE</button>
+  <button class="btn btn-b" onclick="window.print()">🖨️ Imprimer 1 PAGE</button>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-<script>
-function toPDF(){
- html2pdf().set({margin:0.1,filename:'SpeakUpCI-Fiche-PRO.pdf',html2canvas:{scale:3,useCORS:true},jsPDF:{format:'a4'}}).from(document.getElementById('fiche')).save();
-}
-</script>
 </body>
 </html>
